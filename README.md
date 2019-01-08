@@ -1,7 +1,6 @@
-# hassio-addons
-Developmental addons for Hass.io/Home Assistant
-
 # YoApe's Hass.io Add-ons
+
+Developmental addons for Hass.io/Home Assistant
 
 ## Available Add-ons
 
