@@ -1,12 +1,12 @@
+import sys
 import os
-from pid import PidFile
 from os import listdir
+from pid import PidFile
 import time
 import threading
 from threading import Lock
 from monitoredFolder import MonitoredFolder
-from watcher_macos import Watcher
-import sys
+from watcher_linux import Watcher
 
 path = './momon/data'
 timeout = 5.0

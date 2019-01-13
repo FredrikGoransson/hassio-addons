@@ -11,11 +11,11 @@ class EventHandler(pyinotify.ProcessEvent):
 
     def process_IN_CREATE(self, event):
          print("+ %s" % (event.pathname))
-         self._watcher.added(self._watcher, event.pathname)
+         self._watcher.added(event.pathname)
 
     def process_IN_DELETE(self, event):
          print("- %s" % (event.pathname))
-         self._watcher.removed(self._watcher, event.pathname)
+         self._watcher.removed(event.pathname)
 
 class Watcher():
 
@@ -45,7 +45,7 @@ class Watcher():
 
     def removed(self, filepath):
         folder = self.getMonitoredFolder(filepath)
-        folder.Add(filepath)
+        folder.Remove(filepath)
 
     def watch(self):
 

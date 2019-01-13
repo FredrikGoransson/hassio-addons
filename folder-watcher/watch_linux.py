@@ -1,11 +1,12 @@
-from pid import PidFile
+import sys
+import os
 from os import listdir
+from pid import PidFile
 import time
 import threading
 from threading import Lock
 from monitoredFolder import MonitoredFolder
 from watcher_linux import Watcher
-import sys
 
 path = './data'
 timeout = 5.0
@@ -13,6 +14,8 @@ timeout = 5.0
 def createMonitoredFolder(monitorPath, monitorTimout):
     folder = MonitoredFolder(monitorPath, monitorTimout)
     return folder
+
+print "Starting ", sys.argv[0]
 
 if __name__ == "__main__":
     pidfile = os.path.join("/", "tmp", "pywatcher.pid")

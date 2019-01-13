@@ -1,0 +1,3 @@
+pyinotify
+pyyaml
+pid
